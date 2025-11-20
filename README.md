@@ -66,5 +66,4 @@ The trained model along with preprocessing steps was saved for production use:
 
 ---
  
-4. Expand the project to include **additional operational sensors** for more comprehensive predictions.
 
