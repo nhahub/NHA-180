@@ -3,7 +3,7 @@
 ## 🧾 Project Overview
 **proMaint** is a data science project aimed at **predicting machine failures before they occur**.  
 The project uses operational data from industrial machines, including temperatures, torque, rotational speed, tool wear, and product information.  
-The main goal is to build a model capable of **accurately detecting potential failures** and improving maintenance efficiency.
+The main goal is to build models capable of **accurately detecting potential failures** and improving maintenance efficiency.
 
 ---
 
@@ -32,13 +32,13 @@ Instead of removing outliers, we **converted them into new features** that refle
 - **Heat Dissipation Gap:** Difference between process temperature and air temperature, reflecting the machine’s ability to dissipate heat.  
 - **Power Indicator:** Combination of torque and rotational speed, representing mechanical load intensity.
 
-> These engineered features added **operational context** and improved the model’s ability to predict failures.
+> These engineered features added **operational context** and improved the models’ ability to predict failures.
 
 ---
 
-## 🤖 Model & Evaluation
-A **Random Forest Classifier** was trained on the machine failure dataset.  
+## 🤖 Models & Evaluation
 
+### 1️⃣ Random Forest Classifier
 **Performance Metrics:**
 - **Average F1 Score (Cross-Validation):** 0.987  
 - **F1 Score (Test Set):** 0.985  
@@ -48,12 +48,23 @@ A **Random Forest Classifier** was trained on the machine failure dataset.
 
 > The model can **accurately detect failures** even with highly imbalanced data.
 
+### 2️⃣ XGBoost Classifier
+**Performance Metrics:**
+- **Average F1 Score (Cross-Validation):** 0.985  
+- **F1 Score (Test Set):** 0.985  
+- **Accuracy:** 0.999  
+- **Precision:** 1.0  
+- **Recall:** 0.971  
+- **ROC AUC:** 0.992  
+
+> XGBoost provides comparable performance to Random Forest while handling imbalanced data effectively.
+
 ---
 
 ## 💾 Deployment & Usage
-The trained model along with preprocessing steps was saved for production use:  
+The trained models along with preprocessing steps were saved for production use:  
 
-- Users can **load the model** and generate **real-time predictions** for machine failure.  
+- Users can **load either model** and generate **real-time predictions** for machine failure.  
 - Maintains the **operational context** of the data for accurate predictions.
 
 ---
@@ -62,8 +73,4 @@ The trained model along with preprocessing steps was saved for production use:
 - Outliers in torque and rotational speed are **true indicators of failure**, not noise.  
 - **HDF** is the strongest predictor of machine failure.  
 - Engineered features like **Heat Dissipation Gap** and **Power Indicator** reflect **load, wear, and heat**, improving predictive accuracy.  
-- The Random Forest model is **highly effective** in handling imbalanced data.
-
----
- 
-
+- Both Random Forest and XGBoost models are **highly effective** in handling imbalanced data.
