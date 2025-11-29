@@ -69,6 +69,25 @@ The trained models along with preprocessing steps were saved for production use:
 
 ---
 
+## 📎 Additional Resources
+Project Presentation PDF: (https://drive.google.com/file/d/1RtLImfUlYuSEbWVWH5VZMkMhyXtcg-cR/view)
+
+
+---
+
+## 📂 Project Structure
+ProMaint/
+│
+├── ProMaint-1.ipynb              # Main Jupyter notebook with EDA, feature engineering, and modeling
+├── ProMaint_Documentation.pdf    # Detailed project documentation
+├── ProMaint_Presentation.pdf     # Project presentation slides (Drive link to be added)
+├── api-1.py                      # API script for serving the model predictions
+├── app.py                        # Web application script
+├── cols.json                      # JSON file containing feature column names
+├── dataset.csv                    # Original dataset used for training
+├── model_rf_pipeline.joblib       # Saved Random Forest pipeline for predictions
+└── requirements.txt               # Python dependencies for the project
+
 ## ⚡ Key Insights
 - Outliers in torque and rotational speed are **true indicators of failure**, not noise.  
 - **HDF** is the strongest predictor of machine failure.  
