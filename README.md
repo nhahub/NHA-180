@@ -79,7 +79,7 @@ The trained models along with preprocessing steps were saved for production use:
 ---
 
 ## 📎 Additional Resources
-Project Presentation PDF: (https://drive.google.com/file/d/1RtLImfUlYuSEbWVWH5VZMkMhyXtcg-cR/view)
+Project Presentation PDF: (https://drive.google.com/file/d/1RtLImfUlYuSEbWVWH5VZMkMhyXtcg-cR/view?usp=sharing)
 
 
 ---
